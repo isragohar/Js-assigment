@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Assigemnt</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg" type="-icon">
+<style>
+    body {
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  line-height: 2.5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.gradient-border-button {
+  background-color: transparent;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(45deg, #ff003c, #c648c8);
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gradient-border-button:hover {
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  color: white;
+}
+
+.gradient-border-button:focus {
+  background-color: #ff003c;
+  color: white;
+}
+
+.neon-glow-button {
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #111;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.neon-glow-button:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.neon-glow-button:focus {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+}
+
+
+.td-press-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  transition: all 0.3s ease;
+}
+
+.td-press-button:hover {
+  background-color: #3e8e41;
+}
+
+.td-press-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.ripple-effect-button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.ripple-effect-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: translate(-50%, -50%) scale(10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple-effect-button:active:after {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+.slide-underline-button {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.slide-underline-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.slide-underline-button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.slide-underline-button:focus {
+  color: #555;
+}
+
+.soft-ui-button {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+
+.soft-ui-button:hover {
+  background-color: #d1d1d1;
+  box-shadow: 10px 10px 15px #aaaaaa, -10px -10px 15px #ffffff;
+}
+
+.soft-ui-button:focus {
+  background-color: #cecece;
+  color: #555;
+}
+
+</style>
+
+
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg" width="80px" alt="">
+        </div>
+        <h1><center>Java  Assigment</center></h1>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <button class="gradient-border-button"><a href="index.html" style="color: #000000;">Assigment 1</a></button>
+        <br>
+        <button class="neon-glow-button"><a href="ass.html" style="color: white;">Assigment 2</a></button>
+        <br>
+        <button class="td-press-button"><a href="3s.html" style="color: white;">Assigment 3</a> </button>
+        <br>
+        <button class="ripple-effect-button"><a href="4.html" style="color: white;">Assigment 4</a></button>
+        <br>
+        <button class="slide-underline-button"> <a href="5.html" style="color: #000000;">Asigment 5</a></button>
+        <br>
+      </div>
+
+      <script>
+        let name = prompt("Enter Your Name")
+    alert('Nice Name ! ❤️')
+
+     let age = prompt("Enter Your Age")
+     if (age <= 10) {
+       alert("Hi little developer! 😍")
+     } else if ((age >= 11)) {
+       alert("Hi developer! 😊")
+     }
+
+     let maths = prompt("Are you expert of maths?")
+     if (maths == "yes") {
+       alert("That's great")
+     } else{
+       alert("no problem")
+     }
+
+     let num1 = prompt("Add 88 + 99")
+     if (num1 == "187") {
+       alert("Correct")
+     } else {
+       alert("Wrong")
+     }
+
+     let gk = prompt(
+       "Who is the Father of Physics?"
+     );
+     if (gk == "newton") {
+       alert("Correct")
+     } else {
+       alert("Wrong")
+     }
+
+    
+    
+   </script>
+     </body>
+     </html>
